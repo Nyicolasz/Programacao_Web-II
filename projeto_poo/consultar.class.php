@@ -1,3 +1,34 @@
+<?php
+
+require_once("pessoa.class.php");
+
+
+    
+        $pessoa = new Pessoa();
+
+        //pega o que foi digitado e mostra
+        $pessoa->setNome($_POST['nome']);
+       
+
+        $pessoa->setTelefone($_POST['telefone']);
+       
+        
+        $pessoa->setOrigem($_POST['origem']);
+        
+        
+        $pessoa->setDataContato($_POST['datacontato']);
+
+        $pessoa->setObservacao($_POST['observacao']);
+        
+
+        
+
+        
+
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -69,43 +100,70 @@
         
           <div class="p-4" style="background-color: white;"><!--div usada da cor e do espaçamento-->
 
-          <form method="POST" action="consultar.class.php"><!--inicio do form-->
-              
-              <h5><b>Cadastrar - Agendamento de Potenciais Clientes</b></h5>
-              <p>Sistema utilizado para agendamento de serviços</p>
+          
 
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+            <div class="container text-center">
+              <div class="row">
+
+                <div class="col">
+                  Nome
+                </div>
+
+                <div class="col">
+                  Telefone
+                </div>
+
+                <div class="col">
+                  Origem
+                </div>
+
+                <div class="col">
+                  Contato
+                </div>
+
+                <div class="col">
+                  Observação
+                </div>
+
+                <div class="col">
+                  Ação
+                </div>
+
               </div>
 
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
-                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx">
-              </div>
-              
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Origem:</label>
-                <select style="color: rgb(103, 103, 103);" class="form-control" id="origem"  name="origem" aria-label="Default select example"><!--Stule usado para deixar a letra cinza-->
-                  <option  selected>Celular</option>
-                  <option value="1">Whatsapp</option>
-                  <option value="2">Telefone Fixo</option>
-                </select>
+              <div class="container text-center">
+                <div class="row">
+
+                  <div class="col">
+                  <?php echo $pessoa->getNome()?>
+                  </div>
+
+                  <div class="col">
+                  <?php echo $pessoa->getTelefone()?>
+                  </div>
+
+                  <div class="col">
+                  <?php echo $pessoa->getOrigem()?>
+                  </div>
+
+                  <div class="col">
+                  <?php echo $pessoa->getDataContato()?>
+                  </div>
+
+                  <div class="col">
+                  <?php echo $pessoa->getObservacao()?>
+                  </div>
+                  
+                  <div class="col">
+                  <?php echo $pessoa->getOrigem()?>
+                  </div>
+                  
               </div>
 
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Data do Contato:</label>
-                <input type="date" class="form-control" id="datacontato"  name="datacontato" placeholder="dd/mm/aaaa">
-              </div>
+            </div>
+            </div>
 
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
-                <textarea class="form-control" id="observacao"  name="observacao" rows="3"></textarea>
-              </div>
 
-              <button type="submit" class="btn btn-primary">Cadastrar</button>
-                
-            </form><!--Fechando form-->
           </div><!--Fechadno div da cor e do espaçamento-->
         </div><!--Fechando a coluna do centro-->
 
@@ -119,5 +177,3 @@
 
   </body>
 </html>
-
-
