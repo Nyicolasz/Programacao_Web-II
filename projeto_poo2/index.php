@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--Links para usar o Bootstrap-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+      <title>ProjetoWeb</title>
+  </head>
+
+
+  <body style="background-color: rgb(195, 195, 195);">
+
+    <!--Parte superior-->
+    
+    <div class="container text-center"><!--div usada para conter no centro-->
+      <div class="row"><!--div da linha-->
+
+        <div class="col-1"><!--Primeira coluna-->
+          &nbsp;
+        </div><!--Fechando a primeira coluna-->
+          
+        <div class="col"><!--coluna do centro-->
+          
+          <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark" style="padding-left: 9px;"><!--Usando os botoes de navaegação-->
+            
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SISTEMA WEB</a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Consultar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </nav><!--Fechando os botões de navegação-->
+        
+        </div><!--Fechando a coluna do centro-->
+
+        <!--Terceira coluna-->
+        <div class="col-1">
+          &nbsp;
+        </div><!--Fechadno a terceira coluna-->
+
+      </div><!--Fechando div da linha-->
+    </div><!--Fechando a div do centro-->
+
+    <!--Parte inferior-->
+
+    <div class="container text-left"><!--div para colocar as palavras na esquerda-->
+
+      <div class="row"><!--Div da linha-->
+
+        <div class="col-1"><!--Primeira coluna-->
+          &nbsp;
+        </div><!--Fechando a primeira coluna-->
+
+
+        <div class="col"><!--Coluna do centro-->
+        
+          <div class="p-4" style="background-color: white;"><!--div usada da cor e do espaçamento-->
+
+          <form method="POST" action="consultar.class.php"><!--inicio do form-->
+              
+              <h5><b>Cadastrar - Agendamento de Potenciais Clientes</b></h5>
+              <p>Sistema utilizado para agendamento de serviços</p>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx">
+              </div>
+              
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Origem:</label>
+                <select style="color: rgb(103, 103, 103);" class="form-control" id="origem"  name="origem" aria-label="Default select example"><!--Stule usado para deixar a letra cinza-->
+                  <option  selected>Celular</option>
+                  <option value="1">Whatsapp</option>
+                  <option value="2">Telefone Fixo</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Data do Contato:</label>
+                <input type="date" class="form-control" id="datacontato"  name="datacontato" placeholder="dd/mm/aaaa">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
+                <textarea class="form-control" id="observacao"  name="observacao" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+                
+            </form><!--Fechando form-->
+          </div><!--Fechadno div da cor e do espaçamento-->
+        </div><!--Fechando a coluna do centro-->
+
+        <!--Terceira coluna-->
+        <div class="col-1">
+          &nbsp;
+        </div><!--Fechadno a terceira coluna-->
+
+      </div><!--Fecahndo div da linha-->
+    </div><!--FEchando div que coloca na esquerda-->
+
+  </body>
+</html>
+
+
