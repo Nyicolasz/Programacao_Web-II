@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function validarDados() {
+            if (document.getElementById("nome").value == "") {
+                console.log("O campo do nome está vazio!");
+            } else {
+                var tamanho = document.getElementById("nome").value.length;
+                if (tamanho > 50) {
+                    console.log("O campo nome esta muito grande!");
+                }
+            }
+
+            if (document.getElementById("endereco").value == "") {
+                console.log("O campo do endereço está vazio!");
+            } else {
+                var tamanho = document.getElementById("endereco").value.length;
+                if (tamanho > 50) {
+                    console.log("O campo endereço esta muito grande!");
+                }
+            }
+
+            if (document.getElementById("bairro").value == "") {
+                console.log("O campo do bairro está vazio!");
+            } else {
+                var tamanho = document.getElementById("bairro").value.length;
+                if (tamanho > 30) {
+                    console.log("O campo bairro esta muito grande!");
+                }
+            }
+
+            if (document.getElementById("cep").value == "") {
+                console.log("O campo do CEP está vazio!");
+            } else {
+                var tamanho = document.getElementById("cep").value.length;
+                if (tamanho > 10) {
+                    console.log("O campo do CEP está muito grande!");
+
+                } else if (document.getElementById("cep").value.indexOf("-") == -1) {
+                    console.log("O campo do CEP deve conter o hífen (-)!");
+                }else if (document.getElementById("cep").value.indexOf("-") == 5){
+                    console.log("hifen está no lugar certo!")
+                }else{
+                    console.log("hifen está no lugar errado!")
+                }
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <form>
+        Nome: <input type="text" name="nome" id="nome"><br><br>
+        Endereço: <input type="text" name="endereco" id="endereco"><br><br>
+        Bairro: <input type="text" name="bairro" id="bairro"><br><br>
+        Cep: <input type="text" name="cep" id="cep"><br><br>
+        <button type="button" name="cadastrar" id="cadastrar" onclick="validarDados()">Cadastrar</button>
+
+</body>
+
+</html>
