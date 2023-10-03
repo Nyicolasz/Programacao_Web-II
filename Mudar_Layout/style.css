@@ -1,0 +1,30 @@
+/*** JavaScript demonstration ***/
+body{
+  margin-left: 13cm;
+}
+
+#square {
+    width: 20em;
+    height: 20em;
+    border: 2px inset gray;
+    margin-bottom: 1em;
+    text-align: center;
+    
+  }
+  
+  
+.dark-mode #square{
+  background-color: black;
+  color: white;
+}
+
+.dark-mode button {
+  background-color: black;
+  color: white;
+}
+
+  button {
+    padding: 0.5em 2em;
+    margin-left: 100px;
+  }
+  
